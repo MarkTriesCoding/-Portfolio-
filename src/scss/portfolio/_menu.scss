@@ -1,6 +1,6 @@
 .nav{
   z-index:1500;
-  font-family: roboto;
+  font-family: "Red Hat Display";
   height:100px;
   position:fixed;
   margin-bottom:100px;
@@ -30,10 +30,16 @@
     transform:rotate(-90deg);
     top: calc(50vh - 3ch);
     left: -2.5em;
-    font-size: 0.9em;
+    font-size: 24px;
     font-weight:normal;
     color:rgb(217, 168, 91);
     transition:all 0.4s ease;
+}
+@media (max-width:850px){
+  .name-vertical{
+    font-size:1.1rem;
+    text-shadow:1px 1px 3px  rgba(0,0,0,0.5);
+  }
 }
 .name-dark{
   color:#262829;
@@ -212,17 +218,19 @@
     position:fixed;
     right:-100%;
     top:00px;
-    width:50vw;
+    width:90vw;
     height:100vh;
     transition:all 0.4s ease;
     display:flex;
-    clip-path:circle(100% at 100% 0%);
+    // clip-path:circle(100% at 100% 0%);
     flex-direction:column;
     transition:all 0.4s ease-out;
     ul{
       list-style:none;
       margin-top:100px;
       width:100%;
+      font-family:"Red Hat Display";
+      font-size:1.4rem;
       li {
         padding:20px;
         padding-right:2ch;
@@ -261,8 +269,8 @@
     color:$darkText;
     right:0;
     top:00px;
-    width:50vw;
-    height:75vh;
+    width:90vw;
+    height:100vh;
     transition:all 0.4s ease-out;
     background: linear-gradient(45deg, #283d50e3, $darkBlue);
     a{
@@ -274,11 +282,17 @@
  }
 
  @media (min-width:850px){
+   .modal{
+     width:100%;
+
+   }
    .nav{
      .mobile{
        visibility:hidden;
        transition: 0s;
        transition:all 0.4s ease-out;
+
+
      }
      .desktop{
        visibility:visible;
