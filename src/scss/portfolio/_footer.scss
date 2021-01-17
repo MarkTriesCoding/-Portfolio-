@@ -64,7 +64,10 @@
   p{
    padding:2px;
   }
-  }
+}
+@media (max-width:850px){
+  margin-left:20px;
+}
 .madeWith{
   display:flex;
   flex-direction:column;
