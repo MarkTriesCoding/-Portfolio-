@@ -1,0 +1,24 @@
+.trees-foreground{
+  fill:#3f534d;
+  fill:#243433;
+}
+.trees-background{
+  fill:#384841
+}
+.trees-midground{
+  fill:#2d3428;
+}
+#trees{
+  position:absolute;
+  top:1px;
+  transform:translateY(-100%);
+  z-index:1;
+}
+#mountains{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    transform: translateY(95%) rotate(180deg);
+    fill:#262829;
+}

@@ -1,0 +1,60 @@
+.brand{
+  font-family:'Righteous';
+  color:white;
+  position: absolute;
+  left: 10px;
+  top:10px;
+  font-size:1.5rem;
+  transition:transform 0.5s;
+  z-index:10;
+  cursor:default;
+
+  a{
+    animation-iteration-count: 1;
+      text-decoration:none;
+      &:hover{
+        color:white;
+        text-decoration:none;
+
+          & .ark{
+
+          animation: showark 1s forwards ease-in;
+        }
+        & .alstead{
+
+        animation: showalstead 1s forwards ease-in;
+      }
+      }
+      &:visited{
+        color:white;
+      }
+      &:-webkit-any-link{
+        color:white;
+      }
+
+  }
+
+}
+.ark, .alstead{
+  overflow-x: hidden;
+  width:0%;
+  display: inline-block;
+  line-height:0.8em;
+}
+
+@keyframes showark {
+  from{
+    width:0%;
+  }
+  to{
+    width:calc(3ch * 0.9) ;
+  }
+}
+@keyframes showalstead {
+  from{
+    width:0%;
+  }
+  to{
+    width:calc(7ch * 0.8) ;
+  }
+}

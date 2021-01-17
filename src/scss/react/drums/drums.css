@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body{
+  font-family:"Quicksand"
+}
+$drum-background: radial-gradient(rgba(35,30,30,1),rgba(10,10,10,1));
+$drum-active-background:radial-gradient(rgba(30,40,30,1),rgba(20,20,20,1));
+$drum-shadow:0px 1px 5px 2px rgba(255,0,0,0.7);
+  $drum-active-shadow:0px 1px 2px 4px rgba(0,255,0,0.75);
+$container-shadow:inset 1px -1px 3px 1px rgba(130,120,120,0.8),
+  2px -1px 0px rgba(0,50,0,0.25);;
+body{
+  width:100vw;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+
+
+}
+
+  body:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    filter:blur(2px) sepia(0.6) grayscale(0.2);
+    width:100%;
+    height:100%;
+    z-index:-2;
+    background-color:rgba(150,120,120,1);
+    background-size:contain ;
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+
+::selection{
+  background-color:transparent;}
+  h2{
+    font-size:2em;
+    color:lightgreen;
+    background:$drum-background;
+    padding:10px;
+    text-align:center;
+    width:330px;
+    margin:150px auto 0px auto;
+    border-radius:5px;
+    box-shadow:$container-shadow;
+}
+.brand{
+  font-family:'Righteous';
+  position:fixed;
+  color:white;
+  left: 40px;
+  top:10px;
+  font-size:2rem;
+  transition:transform 0.5s;
+  z-index:100;
+  cursor:default;
+  a{
+      text-decoration:none;
+      color:inherit;
+  }
+}
+.drum-pad{
+  color:rgba(255,255,255,1);
+  text-shadow:0px 0px 0px rgba(255,255,255,0);
+  font-weight:600;
+  font-size:1.2em;
+  background: $drum-background;
+  width:100px;
+  max-height:100px;
+  margin:5px 5px;
+  display:inline-block;
+  cursor:pointer;
+  box-shadow:$drum-shadow;
+  text-align:center;
+  padding:35px 0px 35px 0px;
+  transition:box-shadow 120ms ease;
+  border-radius:8px;
+}
+.drum-pad:active{
+  box-shadow:$drum-active-shadow;
+  background:$drum-active-background;
+  text-shadow:0px 0.5px 0px rgba(255,255,255,1);
+  color:rgba(255,255,255,0);
+}
+#container{
+  position:relative;
+  width:330px;
+  height:auto;
+  padding:10px;
+  margin:40px auto;
+  background:rgba(50,62,62,1);
+  box-shadow:$container-shadow;
+  border:1px solid black;
+}
+#container::before{
+  content:'';
+  width:350px;
+  height:100px;
+  bottom:-1px;
+  right:-92px;
+  background-color:rgba(0,0,0,0.5);
+  transform:skew(-60deg);
+  position:absolute;
+  border-radius:0px;
+  z-index:-1;
+  filter:blur(4px)
+}
+
+#container::after{
+  content:'';
+  width:350px;
+  height:25px;
+  top:180px;
+  right:-250px;
+  background-color:rgba(0,0,0,0.5);
+  transform:skew(-60deg);
+  position:absolute;
+  z-index:-1;
+  filter:blur(4px)
+}

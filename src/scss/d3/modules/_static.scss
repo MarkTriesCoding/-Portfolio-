@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Oxanium|Righteous&display=swap');
+.social-container{
+  color:white;
+  display:inline;
+}
+.body{
+  position:relative;
+}
+.git, .codepen{
+  display:inline;
+  position:absolute;
+  fill:white !important;
+  z-index: 1;
+  font-size:2em;
+  bottom:50px;
+  right:2vw;
+}
+.git{
+  bottom:60px;
+  right:2.2vw;
+}
+.codepen{
+  bottom:20px;
+  right:2vw;
+}
+.brand{
+  font-family:'Righteous';
+  color:white;
+  position: absolute;
+  left: 10px;
+  top:10px;
+  font-size:2rem;
+  transition:transform 0.5s;
+  z-index:10;
+  cursor:default;
+  a{
+      text-decoration:none;
+      color:inherit;
+  }
+}
+@media (max-width:740px) and (orientation:landscape){
+  .brand{
+    transform:rotate(-90deg) translateY(-30px) translateX(-50px);
+    font-size:1.5rem;
+  }
+}
+.alert{
+  z-index:0;
+  width:0%;
+  height:0%;
+  display:inline;
+  position:absolute;
+  top:-1000px;
+  left:-1000px;
+  font:none;
+
+}
+@media (orientation:portrait) and (max-width:740px) {
+  .alert{
+    z-index:10000;
+    position:absolute;
+    background-color:black;
+    width:100%;
+    top:0;
+    left:0;
+    height:100%;
+    font-size:500px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+  }
+  .alertText{
+    color:white;
+    font-size:10px;
+  }
+}

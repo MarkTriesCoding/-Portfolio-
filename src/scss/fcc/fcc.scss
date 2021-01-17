@@ -1,0 +1,111 @@
+/*
+
+
+NEW MENU STYLE SHEET
+
+
+ */
+ img{
+   width:20px;
+   height:20px;
+ }
+.menu-header{
+  color:white;
+  font-size:2em;
+}
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:80vw;
+  height:80vh;
+  z-index:5;
+}
+.menu-list{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  flex-flow:wrap;
+}
+.menu-list-item{
+  display:flex;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  padding:10px;
+  margin:10px;
+  height:50px;
+  border:2px black solid;
+  border-radius: 10px;
+  color:black;
+  font-size:1.8em;
+  appearance:none;
+  background-color: white;
+}
+a{
+  text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css?family=Oxanium|Righteous&display=swap');
+.social-container{
+  color:white;
+  display:inline;
+}
+.body{
+  position:relative;
+}
+.git, .codepen{
+  display:inline;
+  position:absolute;
+  fill:white !important;
+  z-index: 1;
+  font-size:2em;
+  bottom:50px;
+  right:2vw;
+}
+.git{
+  bottom:60px;
+  right:2.2vw;
+}
+.codepen{
+  bottom:20px;
+  right:2vw;
+}
+.brand{
+  font-family:'Righteous';
+  color:white;
+  position: absolute;
+  left: 10px;
+  top:10px;
+  font-size:2rem;
+  transition:transform 0.5s;
+  z-index:10;
+  cursor:default;
+  a{
+      text-decoration:none;
+      &:hover{
+        color:white;
+        text-decoration:none;
+      }
+      &:visited{
+        color:white;
+      }
+      &:-webkit-any-link{
+        color:white;
+      }
+  }
+
+}
+@media (max-width:740px) and (orientation:landscape){
+  .brand{
+    transform:rotate(-90deg) translateY(-30px) translateX(-50px);
+    font-size:1.5rem;
+  }
+}
+html{
+ height:100%;
+
+background: linear-gradient(225deg, rgba(0,20,36,1) 0%, rgba(64,61,61,1) 0%, rgba(45,48,48,1) 9%, rgba(16,16,17,1) 100%);
+}

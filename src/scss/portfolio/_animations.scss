@@ -1,0 +1,65 @@
+@keyframes arrowMotionBefore{
+  0% {
+    top:0px;
+    left:0px;
+  }
+
+  100%{
+    top:20px;
+    left:20px;
+  }
+}
+@keyframes arrowMotionAfter{
+  0% {
+    top:0px;
+    left:0px;
+  }
+  80%,100%{
+    top:40px;
+    left:40px;
+  }
+}
+
+
+path.shp0{
+/*   background-color:black;
+  color:black; */
+  fill:$lightText;
+  stroke:$lightText;
+/*   stroke-dasharray: 300;
+  stroke-dashoffset: -900; */
+  stroke-width:0.5;
+  fill-opacity: 0;
+  animation-name:dash,fill;
+ 	animation-duration: 2s, 2s;
+	animation-delay: 0.8s, 1.8s;
+	animation-fill-mode: forwards;
+
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+
+//
+// path.shp0{
+//   color:none;
+//   fill:none;
+//   stroke:black;
+//   stroke-dasharray: 300;
+//   stroke-dashoffset: -900;
+//   stroke-width:1;
+//   animation: dash 8s linear infinite;
+// }
+// @keyframes dash {
+//   to {
+//     stroke-dashoffset: 900;
+//   }
+// }

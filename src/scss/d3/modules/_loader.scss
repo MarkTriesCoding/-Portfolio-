@@ -1,0 +1,180 @@
+// .loader-container{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height:100%;
+//   width:100%;
+//   z-index:10000;
+//   background-color: rgba(255,255,255,1);
+//   opacity:1;
+//   transition:opacity 1s ease-in;
+//
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+// }
+// .loader{
+//   z-index:10001;
+//   width:100px;
+//   height:100px;
+//   border:2px white solid;
+//   border-radius:50%;
+//   border-left:grey solid 1px;
+//   border-top:grey solid 2px;
+// }
+//
+// path.shp0{
+//   color:none;
+//   fill:none;
+//   stroke:black;
+//   stroke-dasharray: 300;
+//   stroke-dashoffset: -900;
+//   stroke-width:1;
+//   animation: dash 8s linear infinite;
+// }
+// @keyframes dash {
+//   to {
+//     stroke-dashoffset: 900;
+//   }
+// }
+
+
+
+
+
+
+
+
+.loader-container{
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // height:100%;
+  // width:100%;
+  // z-index:10000;
+  // background-color: white;
+  // opacity:1;
+  // transition:opacity 1s ease;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  z-index:10000;
+  opacity:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  // font-size:100px;
+  color:none;
+  fill:none;
+  background:$darkBlue;
+    transition:opacity 1s linear;
+}
+// body{
+//
+// }
+
+path.shp0{
+/*   background-color:black;
+  color:black; */
+  fill:$darkText;
+  stroke:$darkText;
+/*   stroke-dasharray: 300;
+  stroke-dashoffset: -900; */
+  stroke-width:0.5;
+  fill-opacity: 0;
+  animation-name:dash,fill;
+ 	animation-duration: 2s, 2s;
+	animation-delay: 0s, 1s;
+	animation-fill-mode: forwards;
+
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  to {
+    fill-opacity: 1;
+  }
+}
+.loader-svg{
+  transform:scale(1);
+  fill:none;
+
+}
+@media screen and (min-width: 500px){
+  transform:scale(2);
+  fill:none;
+}
+#m{
+  stroke-dasharray: 305.0008239746094px;
+	stroke-dashoffset: 305.0008239746094px;
+}
+#a1{
+  stroke-dasharray: 239.87403869628906px;
+	stroke-dashoffset: 239.87403869628906px;
+}
+#r{
+  stroke-dasharray: 108.51749420166016px;
+	stroke-dashoffset: 108.51749420166016px;
+}
+#k{
+  stroke-dasharray: 215.39389038085938px;
+	stroke-dashoffset: 215.39389038085938px;
+}
+#h{
+  stroke-dasharray: 218.99261474609375px;
+	stroke-dashoffset: 218.99261474609375px;
+}
+#a2{
+  stroke-dasharray: 239.8748321533203px;
+	stroke-dashoffset: 239.8748321533203px;
+}
+#l{
+  stroke-dasharray: 104.03997802734375px;
+	stroke-dashoffset: 104.03997802734375px;
+}
+#s{
+  stroke-dasharray: 197.4832763671875px;
+	stroke-dashoffset: 197.4832763671875px;
+}
+#t{
+  stroke-dasharray: 136.80148315429688px;
+	stroke-dashoffset: 136.80148315429688px;
+}
+#e1{
+  stroke-dasharray: 222.5667724609375px;
+	stroke-dashoffset: 222.5667724609375px;
+}
+#a3{
+  stroke-dasharray: 239.87403869628906px;
+	stroke-dashoffset: 239.87403869628906px;
+}
+#d1{
+  stroke-dasharray: 254.5055694580078px;
+	stroke-dashoffset: 254.5055694580078px;
+}
+#dot{
+  stroke-dasharray: 11.407050132751465px;
+	stroke-dashoffset: 11.407050132751465px;
+}
+#d2{
+  stroke-dasharray: 254.49993896484375px;
+	stroke-dashoffset: 254.49993896484375px;
+}
+#e2{
+  stroke-dasharray: 222.5717315673828px;
+	stroke-dashoffset: 222.5717315673828px;
+}
+#v{
+  stroke-dasharray: 151.44284057617188px;
+	stroke-dashoffset: 151.44284057617188px;
+}
