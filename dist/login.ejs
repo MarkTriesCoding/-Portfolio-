@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <!-- <link type="text/css" rel="stylesheet" href="/styles/style.css"> -->
+
+<link href="/snake.css" rel="stylesheet"></head>
+<body>
+  <div id="game-box">
+    <div class="title">
+      SNEK
+    </div>
+
+</div>
+  <div class="brand"><a href="/" >mh.dev</a></div>
+  <div class="form-container">
+    <div class="displayMessage">
+    <%= displayMessage %>
+    </div>
+    <form class="login-form" action="/snake/login" method="post">
+      <div class="name">
+        <label for="username">Name</label>
+        <input type="text" name="username" id="username" value="" required>
+      </div>
+
+      <button type="submit" name="button">Submit</button>
+    </form>
+    <!-- <a class="register-link" href="/snake/register" >Register</a> -->
+  </div>
+
+
+
+<script src="/snake.js"></script></body>
+</html>
