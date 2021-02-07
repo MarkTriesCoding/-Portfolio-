@@ -9,20 +9,22 @@
   z-index:10;
   cursor:default;
 
+  
   a{
     animation-iteration-count: 1;
       text-decoration:none;
+
       &:hover{
         color:white;
         text-decoration:none;
 
           & .ark{
 
-          animation: showark 1s forwards ease-in;
+          animation: showArk 1s forwards ease-in;
         }
         & .alstead{
 
-        animation: showalstead 1s forwards ease-in;
+        animation: showAlstead 1s forwards ease-in;
       }
       }
       &:visited{
@@ -40,9 +42,10 @@
   width:0%;
   display: inline-block;
   line-height:0.8em;
+  font-size: inherit;
 }
 
-@keyframes showark {
+@keyframes showArk {
   from{
     width:0%;
   }
@@ -50,7 +53,7 @@
     width:calc(3ch * 0.9) ;
   }
 }
-@keyframes showalstead {
+@keyframes showAlstead {
   from{
     width:0%;
   }
