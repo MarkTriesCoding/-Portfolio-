@@ -22,6 +22,14 @@ body{
   position: relative;
   font-family:'Press Start 2P', monospace;
 }
+.brand{
+  font-size:2rem !important;
+     display:inline-block;
+     width:25vw;
+}
+a{
+  font-size:inherit;
+}
 #game-box{
   background-color:var(--board-bg);
   width:75vmin;
@@ -35,6 +43,7 @@ body{
   z-index:1;
   // background-image: url("https://www.dictionary.com/e/wp-content/uploads/2018/06/snek.jpeg");
   box-shadow:inset 0px 0px 8px 2px rgba(0,0,0,0.5);
+  transition:background-color 0.5s ease-in;
 }
 #game-box::before{
   content:attr(count);
@@ -72,7 +81,7 @@ body{
   background-color: green;
   z-index:5;
 
-  /* border:0.5vmin solid green; */
+ border:0.1vmin solid darkgreen;
 
 }
 .snake{
@@ -80,29 +89,9 @@ body{
   background-color:green;
   /* position:relative; */
   position: relative;
+  z-index:20;
 }
-/* .snake:first-child::after{
-  z-index:5;
-  position: absolute;
-  content:"";
-  width:4px;
-  height:4px;
-  border-radius: 50%;
-  background-color:black;
-  top:calc(50% - 2px);
-  left:calc(50% - 6px);
-}
-.snake:first-child::before{
-  z-index:5;
-  position: absolute;
-  content:"";
-  width:4px;
-  height:4px;
-  border-radius: 50%;
-  background-color:black;
-  top:calc(50% - 2px);
-  left:calc(50% + 2px);
-} */
+
 .fruit{
   background-color: red;
   border-radius:50%;

@@ -44,12 +44,12 @@ import {checkBoundary} from './grid.js'
       // await function(){
       //   return
       // }
-      let messages=["OH NOES!","KRASH","BONK!","AHH WALL!"]
+      let messages=["OH NOES!","BOOP!","WALL!","BONK!"]
       let message = messages[Math.floor(Math.random()*4)]
-       title.innerHTML=message +"</br></br>PLAY MOAR SNEK??"
-       title.style.textAlign = "center"
-       title.style.left="calc(50% - 7ch)";
-      title.style.fontSize="2rem"
+       title.innerHTML=message
+
+       title.style.left="calc(50% - 2ch)";
+      // title.style.fontSize="2rem"
        game.style.backgroundImage="url('https://www.dictionary.com/e/wp-content/uploads/2018/06/snek.jpeg')";
        game.style.background="rgba(100,60,60,0.5)"; //disrupt current background for 200ms
       setTimeout(function(){

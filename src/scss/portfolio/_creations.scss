@@ -14,7 +14,7 @@
   align-items:center;
   display:flex;
   // background:#262829;
-  background-image: linear-gradient(182deg, #262829  0%, #262829  5%, #3d72b4 60%, #7898aa 100%);
+  background-image: linear-gradient(182deg, #262829  0%, #262829  20%, #3d72b4 70%, #7898aa 100%);
 
   padding-bottom:100px;
   .projects-header{
@@ -98,17 +98,15 @@
           display: flex;
           align-items: flex-end;
           width:40vmin;
-          height:30vmin;
+          height:40vmin;
           position:relative;
           background:grey;
           box-shadow:8px 8px 15px -4px rgba(0,0,0,0.7);
           overflow: hidden;
           text-align: center;
           color: whitesmoke;
-          font-family: "Red Hat Display";
           // background-color: whitesmoke;
-          border-radius:20px;
-          border:2px solid white;
+          border-radius:10px;
           &.stocklists-img:before{
             filter: opacity(0.6);
             background-image:url("/../../assets/stocklists-2.png");
@@ -247,10 +245,10 @@
           line-height: 1.2;
         }
         .proj-blurb{
-          font-family: var(--font-serif);
-          font-size: 1.2rem;
+          font-family: "Red Hat Display";
+          font-size: 1rem;
           // font-style: italic;
-          line-height: 1.5;
+          line-height: 1.2;
         }
         .proj-btn{
           cursor: pointer;
@@ -266,14 +264,11 @@
 
           &:hover {
             background-color: lighten($darkText, 5%);
-            &:active {
-              // background-color: $darkText;
-              filter:blur(1px);
-            }
           }
 
           &:focus {
-            background-color: $darkText;
+            outline: 1px dashed $darkText;
+            outline-offset: 3px;
           }
         }
 
