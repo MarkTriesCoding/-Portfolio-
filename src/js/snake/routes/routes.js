@@ -7,9 +7,6 @@ const router = express.Router()
 let currentUser = "";
 let currentUserHighScore = 1;
 
-// app.get('/snake',(req,res)=>{
-//   res.sendFile(process.cwd() + '/dist/snake.html' );
-// });
 
   router.get("/snake",checkAuthenticated, async(req,res)=>{
   var highScoreLeaders;
@@ -61,22 +58,9 @@ let currentUserHighScore = 1;
    })
        await res.redirect('/snake');
   })
-//   router.get("/save",async (req,res)=>{
-//     console.log("5herehere",currentUser);
-//     await User.findOne({username:currentUser},(err,data)=>{
-// console.log("6data"+data);
-//       return data
-//     })
-//     // res.render(process.cwd()+"/public/views/index", { highScore: req.body.highScore, username:req.body.username})
-//       res.redirect('/');
-//      // res.render(process.cwd()+"/public/views/index", { highScore: req.body.highScore, username:req.body.username})
-//   })
-
-
-
 
   router.get("/snake/login", async(req,res)=>{
-    await res.render('login',{displayMessage:"Do you want to play SNEK?!"}  )
+    await res.render('login',{displayMessage:"Choose your Snek's name to play!"}  )
 
   })
   router.post('/snake/login',async(req,res)=>{
@@ -88,32 +72,9 @@ let currentUserHighScore = 1;
   }
 
 
-  //
-  //  passport.authenticate('local',{
-  //   successRedirect:'/snake',
-  //   failureRedirect:'/snake/login',
-  //   failureFlash:true
-  // })
-
 
   )
 
-  // router.get("/snake/register",(req,res)=>{
-  //     res.render('register',{displayMessage:"REGISTER"})
-  // })
-  // router.post('/snake/register', function (req,res,next){
-  //
-  //   User.register(new User({username: req.body.username}), req.body.password, function(err) {
-  //   if (err) {
-  //     let errMessage = err.message
-  //       res.render('register',{displayMessage:errMessage})
-  //     return next(err);
-  //   }
-  //   console.log('user registered!');
-  //   res.redirect('/snake');
-  // });
-  //
-  // })
 
   router.get('/snake/logout',async(req,res)=>{
   await  req.logOut()
@@ -121,29 +82,7 @@ let currentUserHighScore = 1;
   })
 
 
-  // async function checkAuthenticated(req,res,next){
-  //   if (req.isAuthenticated()){
-  //     return next()
-  //   }
-  //   await res.redirect('/snake/login')
-  // }
 
-  // async function loginMiddleware(req,res,next){
-  //   // await User.findOne( { username:req.body.username},(err,doc)=>{
-  //   //   if(err ||res.status == 405) {
-  //   //     res.render('login',{displayMessage:err.message})
-  //   //     return next(err)
-  //   //   };
-  //   //
-  //   //   if(!doc){
-  //   //     res.render('login',{displayMessage:"no user found"})
-  //   //     return next()
-  //   //   }
-  //   //   currentUser = doc.username;
-  //   //   currentUserHighScore = doc.highScore;
-  //   //   next()
-  //   })
-  // }
   router.get('/',(req,res)=>{
     res.sendFile(process.cwd() + '/dist/index.html' );
   });
