@@ -87,7 +87,7 @@ let currentUserHighScore = 1;
 
 
   router.get("/snake/login", async(req,res)=>{
-    await res.render('login',{displayMessage:"Do you SNEK?!"}  )
+    await res.render('login',{displayMessage:"Choose your Snek's name and play!"}  )
 
   })
   router.post('/snake/login',checkUser,async(req,res)=>{
