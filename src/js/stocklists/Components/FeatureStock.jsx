@@ -2,10 +2,21 @@ import React from 'react';
 
 import {FaTrash,FaArrowUp,FaArrowDown,FaPen} from 'react-icons/fa';
 
+function crop_name_length(props_symbol){
+  if (props_symbol.length > 20){
+    return props_symbol.substring(0,20) + "..."
+  }
+  else{
+    return props_symbol
+  }
+}
+
 var FeatureStock = function(props) {
   if(props.isClosed) {
     return null;
   } else {
+
+
 
     return (
 
@@ -33,6 +44,7 @@ var FeatureStock = function(props) {
           onClick={props.addToCustom}
           data-key={props.symbol}
         >
+
            <FaPen data-key={props.symbol}/>
         </div>
         <div
@@ -42,7 +54,7 @@ var FeatureStock = function(props) {
         >
            <FaTrash data-key={props.symbol}/>
         </div>
-        <p className="stockName">{props.stock}</p>
+        <p className="stockName">{props.isExpanded ? props.stock : crop_name_length(props.stock)}</p>
         <p className="exchange">{props.exchange}</p>
         <p className="symbol">{props.symbol}</p>
         <p className="price">{props.price ? props.price.toFixed(2) : null}</p>
@@ -99,6 +111,7 @@ var FeatureStock = function(props) {
         <p
           className={
             "peRatio"
+
                +" " +
             (props.isExpanded ? "featureExpanded" : "featureHidden")
           }
